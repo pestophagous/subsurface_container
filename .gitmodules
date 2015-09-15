@@ -10,3 +10,6 @@
 [submodule "marble"]
 	path = marble
 	url = git://git.subsurface-divelog.org/marble.git
+[submodule "subsurface"]
+	path = subsurface
+	url = git@github.com:pestophagous/subsurface.git
