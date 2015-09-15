@@ -1,0 +1,12 @@
+[submodule "grantlee"]
+	path = grantlee
+	url = git://git.subsurface-divelog.org/grantlee.git
+[submodule "libdc"]
+	path = libdc
+	url = git://git.subsurface-divelog.org/libdc.git
+[submodule "libgit2"]
+	path = libgit2
+	url = git://github.com/libgit2/libgit2
+[submodule "marble"]
+	path = marble
+	url = git://git.subsurface-divelog.org/marble.git
