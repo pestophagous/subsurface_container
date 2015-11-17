@@ -1,3 +1,28 @@
+#!/bin/bash
+# ------- NOTE:  this is ***NOT*** (not not not) a bash file.  However, i added the bin/bash line to get better highlighting in emacs.
+
+# WATCHPOINT.
+# (gdb) awatch -location m_extraActionTimeLimitUnitTracker
+# Hardware access (read/write) watchpoint 4: *(int *) 4423742944
+#     it worked with awatch and watch
+
+
+define pq
+  set $d=$arg0.d
+  printf "(Qt5 QString)0x%x length=%i: \"",&$arg0,$d->size
+  set $i=0
+  set $ca=(const char*)(((const char*)$d)+$d->offset)
+  while $i < ($d->size * 2)
+    set $c=$ca[$i++]
+    #if $c < 32 || $c > 127
+    #  printf "\\u%04x", $c
+    #else
+      printf "%c" , (char)$c
+    #end
+  end
+  printf "\"\n"
+end
+
 file ~/Documents/SHARED/subsurface_container/subsurface/build/subsurface
 
 break main
